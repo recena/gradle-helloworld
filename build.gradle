@@ -1,8 +1,13 @@
 task showGlobalEnv << {
 
     println 'Test match: ' + System.env.INJECTEDVAR1
+    println 'Test match: ' + System.env.PASSWORD1
 
     System.env.INJECTEDVAR1.each {
         println it
     }
+    System.env.PASSWORD1.each {
+        println it
+    }
+
 }
