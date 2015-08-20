@@ -1,0 +1,9 @@
+task showGlobalEnv << {
+
+    System.env.TEST_ENV  == 'T123'
+    println 'Test match: ' + System.env.PATH
+
+    System.env.LOGNAME.each {
+        println it
+    }
+}
