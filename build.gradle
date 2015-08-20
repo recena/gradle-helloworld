@@ -1,9 +1,8 @@
 task showGlobalEnv << {
 
-    System.env.TEST_ENV  == 'T123'
-    println 'Test match: ' + System.env.PATH
+    println 'Test match: ' + System.env.INJECTEDVAR1
 
-    System.env.LOGNAME.each {
+    System.env.INJECTEDVAR1.each {
         println it
     }
 }
