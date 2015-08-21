@@ -15,5 +15,9 @@ task showGlobalEnv << {
         println it
     }
 
-    println System.properties['system']
+    println System.getenv('VAR')
+
+    println System.getenv('PASSWORDLOCAL')
+
+    println System.getenv('PASSWORDGLOBAL')
 }
