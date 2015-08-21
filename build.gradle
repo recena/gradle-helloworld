@@ -1,6 +1,18 @@
 task showGlobalEnv << {
 
     println 'VAR was injected using the field "Properties Content": ' + System.env.VAR
+    System.env.VAR.each {
+        println it
+    }
+
     println 'PASSWORDLOCAL was injected using the option "Inject passwords": ' + System.env.PASSWORDLOCAL
+    System.env.PASSWORDLOCAL.each {
+        println it
+    }
+
     println 'PASSWORDGLOBAL was injected using the option "Inject passwords": ' + System.env.PASSWORDGLOBAL
+    System.env.PASSWORDGLOBAL.each {
+        println it
+    }
+
 }
